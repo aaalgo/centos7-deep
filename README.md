@@ -44,6 +44,8 @@ cd centos7-deep
 ./install-neon.sh
 ```
 
+注意neon只支持virtualenv安装, 需要用. $HOME/.neon/bin/activate激活virtualenv
+
 # 安装tensor-flow
 ```
 ./install-tensorflow.sh
