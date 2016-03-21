@@ -1,2 +1,4 @@
 # centos7-deep
-setup centos7 deep learning environment
+Setup Deep Learning Environment on CentOS 7
+
+#  
