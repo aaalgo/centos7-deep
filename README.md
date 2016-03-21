@@ -44,3 +44,7 @@ cd centos7-deep
 ./install-neon.sh
 ```
 
+# 安装tensor-flow
+```
+./install-tensorflow.sh
+```
