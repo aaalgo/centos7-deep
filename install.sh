@@ -48,7 +48,7 @@ sudo yum install -y hdf5-devel libyaml-devel gflags-devel protobuf-devel glog-de
 
 sudo pip install --upgrade pip
 export LDFLAGS=-shared
-sudo pip install -r requirements
+sudo pip install -r requirements.txt
 sudo pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
 sudo pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 

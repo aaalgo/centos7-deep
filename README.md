@@ -27,7 +27,12 @@ git clone https://github.com/aaalgo/centos7-deep.git
 ```
 
 # 安装Caffe
+```
+./install-caffe.sh
+```
 
-
-# 安装Nirvana
+# 安装Nirvana neon
+```
+./install-neon.sh
+```
 
