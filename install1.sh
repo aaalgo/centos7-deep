@@ -33,7 +33,7 @@ sudo yum clean all
 sudo yum install -y epel-release
 sudo yum groupinstall -y 'Development Tools'
 # important devtools
-yum install -y devtoolset-3-binutils devtoolset-3-elfutils devtoolset-3-gdb devtoolset-3-gcc devtoolset-3-memstomp devtoolset-3-strace devtoolset-3-valgrind devtoolset-3-dyninst devtoolset-3-gcc-c++ devtoolset-3-libstdc++-devel devtoolset-3-ltrace devtoolset-3-perftools devtoolset-3-gcc-gfortran
+sudo yum install -y devtoolset-3-binutils devtoolset-3-elfutils devtoolset-3-gdb devtoolset-3-gcc devtoolset-3-memstomp devtoolset-3-strace devtoolset-3-valgrind devtoolset-3-dyninst devtoolset-3-gcc-c++ devtoolset-3-libstdc++-devel devtoolset-3-ltrace devtoolset-3-perftools devtoolset-3-gcc-gfortran
 # install cuda
 sudo yum install -y cuda
 F=`readlink -e $CUDNN`
@@ -48,7 +48,7 @@ sudo yum install -y hdf5-devel libyaml-devel gflags-devel protobuf-devel glog-de
 
 sudo sh -c 'echo /usr/local/cuda/lib64 > /etc/ld.so.conf.d/cuda.conf'
 sudo ldconfig
-sudo sh -c 'echo export PATH=/usr/local/cuda/bin:$PATH > /etc/profile.d/cuda.sh'
+sudo sh -c 'echo export PATH=/opt/rh/devtoolset-3/root/usr/bin:/usr/local/cuda/bin:$PATH > /etc/profile.d/cuda.sh'
 
 touch install1.done
 echo "You can now reboot and proceed to install2.sh"
