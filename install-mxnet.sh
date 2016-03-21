@@ -4,6 +4,7 @@ git clone https://github.com/dmlc/mxnet.git
 cd mxnet
 git submodule init
 git submodule update
+echo "CMAKE_SHARED_LINKER_FLAGS:STRING='-L/usr/local/cuda/lib64'" > CMakeCache.txt
 cmake .
 make -j8
 if [ -f liblibmxnet.so ]

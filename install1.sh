@@ -32,8 +32,10 @@ sudo rpm -ivh `basename $CUDA` `basename $DEVTOOL`
 sudo yum clean all
 sudo yum install -y epel-release
 sudo yum groupinstall -y 'Development Tools'
+sudo yum install -y cmake
 # important devtools
 sudo yum install -y devtoolset-3-binutils devtoolset-3-elfutils devtoolset-3-gdb devtoolset-3-gcc devtoolset-3-memstomp devtoolset-3-strace devtoolset-3-valgrind devtoolset-3-dyninst devtoolset-3-gcc-c++ devtoolset-3-libstdc++-devel devtoolset-3-ltrace devtoolset-3-perftools devtoolset-3-gcc-gfortran
+sudo yum install -y kernel-devel-$(uname -r) kernel-headers-$(uname -r)
 # install cuda
 sudo yum install -y cuda
 F=`readlink -e $CUDNN`

@@ -14,6 +14,15 @@ echo "something's wrong"
 exit
 fi
 
+# detect and install NVidia driver
+nvidia-smi
+if [ $? != 0 ]
+then
+	echo nvidia driver not installed
+	echo Download and install driver here http://www.nvidia.com/Download/index.aspx
+	exit
+fi
+
 sudo pip install --upgrade pip
 export LDFLAGS=-shared
 sudo pip install -r requirements.txt
