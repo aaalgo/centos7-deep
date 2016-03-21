@@ -6,6 +6,7 @@ Setup Deep Learning Environment on CentOS 7
 - 干净安装的CentOS 7  
 - 用一个带无需密码的sudo权限的用户登陆[(怎么搞?)](http://serverfault.com/questions/160581/how-to-setup-passwordless-sudo-on-linux)
 - 去[这里](https://developer.nvidia.com/cudnn)注册并下载cuDNN
+- 去[这里](http://www.nvidia.com/Download/index.aspx)下载NVidia显卡驱动
 
 ```
 git clone https://github.com/aaalgo/centos7-deep.git
@@ -15,15 +16,18 @@ git clone https://github.com/aaalgo/centos7-deep.git
 
 # 安装基本系统
 
-运行下面的命令将安装cuda, theano, lasagne以及各种必须的包
+运行下面的命令将安装cuda, theano, lasagne, tensorflow以及各种必须的包
 ```
 cd centos7-deep
 ./install1.sh
 ```
 
-重启机器
+重启机器, 安装显卡驱动
 
 ```
+./NVIDIA-Linux-x86_64-361.28.run # 下载的nvidia显卡驱动
+
+
 cd centos7-deep
 ./install2.sh
 ```
@@ -46,7 +50,3 @@ cd centos7-deep
 
 注意neon只支持virtualenv安装, 需要用. $HOME/.neon/bin/activate激活virtualenv
 
-# 安装tensor-flow
-```
-./install-tensorflow.sh
-```

@@ -28,6 +28,7 @@ export LDFLAGS=-shared
 sudo pip install -r requirements.txt
 sudo pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
 sudo pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
+sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.7.1-cp27-none-linux_x86_64.whl
 
 cat > $HOME/.theanorc <<FOO
 [global]
