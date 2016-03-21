@@ -7,6 +7,13 @@ echo "not proceeding"
 exit
 fi
 
+if [ `which nvcc` != '/usr/local/cuda/bin/nvcc' ]
+then
+echo "Cuda not correctly installed."
+echo "something's wrong"
+exit
+fi
+
 sudo pip install --upgrade pip
 export LDFLAGS=-shared
 sudo pip install -r requirements.txt
