@@ -46,17 +46,9 @@ sudo yum install -y python-devel python-pip
 sudo yum install -y opencv-devel opencv-python openblas-devel boost-devel libpng-devel libjpeg-turbo-devel freetype-devel
 sudo yum install -y hdf5-devel libyaml-devel gflags-devel protobuf-devel glog-devel lmdb-devel leveldb-devel snappy-devel atlas-devel
 
-sudo pip install --upgrade pip
-export LDFLAGS=-shared
-sudo pip install -r requirements.txt
-sudo pip install --upgrade https://github.com/Theano/Theano/archive/master.zip
-sudo pip install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
+sudo sh -c 'echo /usr/local/cuda/lib64 > /etc/ld.so.conf.d/cuda.conf'
+sudo ldconfig
+sudo sh -c 'echo export PATH=/usr/local/cuda/bin:$PATH > /etc/profile.d/cuda.sh'
 
-cat > $HOME/.theanorc <<FOO
-[global]
-
-floatX=float32
-device = gpu0
-FOO
-
-
+touch install1.done
+echo "You can now reboot and proceed to install2.sh"
