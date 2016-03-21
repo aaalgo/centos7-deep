@@ -17,7 +17,15 @@ git clone https://github.com/aaalgo/centos7-deep.git
 
 运行下面的命令将安装cuda, theano, lasagne以及各种必须的包
 ```
-./install.sh
+cd centos7-deep
+./install1.sh
+```
+
+重启机器
+
+```
+cd centos7-deep
+./install2.sh
 ```
 
 # 安装mxnet
