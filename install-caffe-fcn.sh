@@ -10,5 +10,7 @@ make -j8
 make py
 sudo cp -r build/lib/* /usr/lib
 sudo cp -r include/caffe /usr/include/
+sudo mkdir -p /usr/include/caffe/proto
+sudo cp  build/src/caffe/proto/*.h /usr/include/caffe/proto
 sudo cp -r python/caffe /usr/lib/python2.7/site-packages/
 
